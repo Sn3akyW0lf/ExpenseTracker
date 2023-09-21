@@ -84,7 +84,7 @@ function remExp(e) {
 }
 
 
-//Editing User Information after Registration
+//Editing Expense Information after Registration
 
 function editExp(e) {
     if (e.target.classList.contains('edit')) {
