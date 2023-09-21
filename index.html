@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="my-form" class="text-bg-secondary bg-opacity-20 border border-dark border-size-3 rounded-3 p-5 m-3">
+            <div class="card p-3 m-3">
+                <h2 class="card-header">Expenses Tracker</h2>
+                <div class="card-body">
+                    <span class="card-text">
+                        Tracking and Maintaining all the Expenses Occured.
+                    </span>
+                    
+                </div>
+            </div>
+            
+            <div>
+                <div id="msg_exp"></div>
+                <label for="expense" class="form-label">Enter Expense Amount</label>
+                <input type="number" id="expense" value="" class="form-control text-bg-dark form-control-sm" placeholder="Enter Your Expense Amount" />
+                
+            </div>
+            <div>
+                <div id="msg_desc"></div>
+                <label for="exp_desc" class="form-label">More About Where You Spent</label>
+                <input type="text" id="exp_desc" value="" class="form-control text-bg-dark form-control-sm" placeholder="Expense Description" />
+            </div>
+            <div>
+                <div id="msg_exp_type"></div>
+                <label for="exp_type" class="form-label">Expense Type</label>
+                <select name="exp_type" id="exp_type" class="form-select form-select-sm form-bg-dark">
+                    <option value="none" selected disabled hidden> Select Expense Type</option>
+                    <option value="rent" class="form-option">Rent</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="electricity">Electricity</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="fuel">Fuel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="leisure">Leisure</option>                    
+                </select>
+            </div>    
+            <input type="submit" value="LOG EXPENSES" class="btn btn-sm btn-outline-light p-3 m-3" />
+        </form>
+        <div class="container text-bg-secondary rounded-2 p-2">
+             <center><h2 class="title">Previous Expenses</h2></center>
+             <ul id="records" class="list-group"></ul>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
