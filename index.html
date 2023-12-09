@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <form id="my-form" class="text-bg-secondary bg-opacity-20 border border-dark border-size-3 rounded-3 p-5 m-3">
+        <form id="my-form" class="text-bg-secondary bg-opacity-20 border border-dark border-size-3 rounded-3 p-5 m-3" method="POST">
             <div class="card p-3 m-3">
                 <h2 class="card-header">Expenses Tracker</h2>
                 <div class="card-body">
@@ -55,12 +55,35 @@
         </form>
         <div class="container text-bg-secondary rounded-2 p-2">
              <center><h2 class="title">Previous Expenses</h2></center>
-             <ul id="records" class="list-group"></ul>
+             <table class="table table-bordered rounded-2 p-2">
+                <thead>
+                    <tr>
+                        <th class="d-none">
+                            id
+                        </th>
+                        <th>
+                            Expense
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Expense Type
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tblExpense">
+                </tbody>
+            </table>
         </div>
     </div>
 
 
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
 </body>
 
 </html>
